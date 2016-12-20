@@ -8,7 +8,7 @@ inherit autotools gnome2-utils
 
 DESCRIPTION="Moka icon theme"
 HOMEPAGE="https://github.com/snwh/moka-icon-theme"
-SRC_URI="https://github.com/snwh/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/snwh/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"

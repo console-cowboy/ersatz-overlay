@@ -10,7 +10,7 @@ DESCRIPTION="Moka icon theme"
 HOMEPAGE="https://github.com/snwh/moka-icon-theme"
 SRC_URI="https://github.com/snwh/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
-LICENSE="GPL-3"
+LICENSE="CC-BY-SA-4.0 GPL-3"
 SLOT="0"
 IUSE=""
 KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~sparc-solaris ~x64-solaris ~x86-solaris"

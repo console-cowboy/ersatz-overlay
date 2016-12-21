@@ -10,7 +10,7 @@ DESCRIPTION="Moka icon theme"
 HOMEPAGE="https://github.com/snwh/moka-icon-theme"
 EGIT_REPO_URI="git://github.com/snwh/moka-icon-theme.git https://github.com/snwh/moka-icon-theme.git"
 
-LICENSE="GPL-3"
+LICENSE="CC-BY-SA-4.0 GPL-3"
 SLOT="0"
 IUSE=""
 KEYWORDS=""

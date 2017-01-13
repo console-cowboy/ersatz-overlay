@@ -18,12 +18,14 @@ DEPEND="
 "
 RDEPEND=""
 
+S=${WORKDIR}/nim-${PV}/tools/nimsuggest
+
 src_compile() {
-	nim c -d:release tools/nimsuggest/${PN}.nim || die "compile failed"
+	nim c -d:release ${PN}.nim || die "compile failed"
 }
 
 src_test() {
-	nim c -d:release tools/nimsuggest/tester.nim || die "tester.nim compile failed"
+	nim c -d:release tester.nim || die "tester.nim compile failed"
 	cd tests
 	./tester
 }
@@ -31,5 +33,5 @@ src_test() {
 src_install() {
 	dodir /usr/bin
 	exeinto /usr/bin
-	doexe tools/nimsuggest/${PN}
+	doexe ${PN}
 }

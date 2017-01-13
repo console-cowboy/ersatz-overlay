@@ -6,7 +6,7 @@ EAPI=6
 
 DESCRIPTION="Tool for providing auto completion data for Nim source code."
 HOMEPAGE="http://nim-lang.org"
-SRC_URI="http://nim-lang.org/download/nim-${PV}.tar.xz -> ${P}.tar.gz"
+SRC_URI="http://nim-lang.org/download/nim-${PV}.tar.xz -> ${P}.tar.xz"
 
 LICENSE="MIT"
 SLOT="0"

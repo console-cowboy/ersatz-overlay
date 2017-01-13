@@ -33,5 +33,5 @@ src_test() {
 src_install() {
 	dodir /usr/bin
 	exeinto /usr/bin
-	doexe tools/nimsuggest/${PN}
+	doexe ${PN}
 }

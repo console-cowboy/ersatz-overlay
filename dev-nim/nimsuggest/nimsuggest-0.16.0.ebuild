@@ -26,7 +26,6 @@ src_compile() {
 
 src_test() {
 	nim c -d:release tester.nim || die "tester.nim compile failed"
-	cd tests
 	./tester
 }
 

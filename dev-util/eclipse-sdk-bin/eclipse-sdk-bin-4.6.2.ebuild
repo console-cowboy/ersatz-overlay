@@ -2,23 +2,24 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-# QA: This is an upstream binary package, must not be added to main tree.
-
 EAPI=6
 
-inherit eutils
+inherit eutils versionator
 
-SR=SR${PV#*.*.}
-SRC_BASE="https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/neon/2/eclipse-java-neon-2-linux-gtk"
+SR=SR$(get_version_component_range 3)
+#SR="R"
+RNAME="neon"
+
+SRC_BASE="http://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/${RNAME}/${SR}/eclipse-java-${RNAME}-${SR}-linux-gtk"
 
 DESCRIPTION="Eclipse SDK"
 HOMEPAGE="http://www.eclipse.org"
 SRC_URI="
-	amd64? ( ${SRC_BASE}-x86_64.tar.gz&r=1 -> eclipse-java-neon-${SR}-linux-gtk-x86_64-${PV}.tar.gz )
-	x86? ( ${SRC_BASE}.tar.gz&r=1 -> eclipse-java-neon-${SR}-linux-gtk-${PV}.tar.gz )"
+	amd64? ( ${SRC_BASE}-x86_64.tar.gz&r=1 -> eclipse-java-${RNAME}-${SR}-linux-gtk-x86_64-${PV}.tar.gz )
+	x86? ( ${SRC_BASE}.tar.gz&r=1 -> eclipse-java-${RNAME}-${SR}-linux-gtk-${PV}.tar.gz )"
 
 LICENSE="EPL-1.0"
-SLOT="4.6"
+SLOT="$(get_version_component_range 1-2)"
 KEYWORDS="~amd64"
 IUSE=""
 
@@ -39,13 +40,13 @@ src_install() {
 
 	dohtml -r about.html about_files epl-v10.html notice.html readme/*
 
+	cp "${FILESDIR}"/eclipserc-bin "${T}" || die
+	cp "${FILESDIR}"/eclipse-bin "${T}" || die
+	sed -e "s@%SLOT%@${SLOT}@" -i "${T}"/eclipse{,rc}-bin || die
+
 	insinto /etc
-	doins "${FILESDIR}"/eclipserc-bin-${SLOT}
+	newins "${T}"/eclipserc-bin eclipserc-bin-${SLOT}
 
-	dobin "${FILESDIR}"/eclipse-bin-${SLOT}
+	newbin "${T}"/eclipse-bin eclipse-bin-${SLOT}
 	make_desktop_entry "eclipse-bin-${SLOT}" "Eclipse ${PV} (bin)" "${dest}/icon.xpm"
-
-	# At least CDT needs the following dir to exist to be installable, doesn't
-	# need to be writable though.
-	keepdir "${dest}"/dropins
 }

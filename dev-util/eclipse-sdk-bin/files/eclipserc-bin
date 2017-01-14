@@ -14,7 +14,7 @@ ECLIPSE_XMX=256m
 # This space contains data related to all classes.
 # Thus, if you use a lot of Eclipse plugins, it is recommended to uncomment
 # these variables and even increase it, if you have enough RAM.
-# Else you will get crashes related to OutOfMemory in PermGen exceptions.
+# Else you will get crashes related to OutOfMemory in PermGen exceptions. 
 
 #ECLIPSE_PERMSIZE=64m
 #ECLIPSE_MAX_PERMSIZE=128m

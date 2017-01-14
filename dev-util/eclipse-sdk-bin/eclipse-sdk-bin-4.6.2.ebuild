@@ -38,7 +38,7 @@ src_install() {
 	exeinto ${dest}
 	doexe eclipse
 
-	dohtml -r about.html about_files epl-v10.html notice.html readme/*
+	dohtml -r readme/*
 
 	cp "${FILESDIR}"/eclipserc-bin "${T}" || die
 	cp "${FILESDIR}"/eclipse-bin "${T}" || die

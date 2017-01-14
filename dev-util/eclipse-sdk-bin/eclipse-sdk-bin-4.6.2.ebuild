@@ -38,7 +38,7 @@ src_install() {
 	exeinto ${dest}
 	doexe eclipse
 
-	dohtml -r readme/*
+	dodoc -r readme/*
 
 	cp "${FILESDIR}"/eclipserc-bin "${T}" || die
 	cp "${FILESDIR}"/eclipse-bin "${T}" || die

@@ -18,4 +18,26 @@ KEYWORDS="~amd64"
 RDEPEND="!=sys-kernel/douane-modules-9999"
 
 S=${WORKDIR}
+
+BUILD_TARGETS="all"
+BUILD_TARGET_ARCH="${ARCH}"
 MODULE_NAMES="douane(net:${S})"
+
+pkg_setup() {
+	linux-mod_pkg_setup
+	BUILD_PARAMS="KERN_DIR=${KV_DIR} O=${KV_OUT_DIR} V=1 KBUILD_VERBOSE=1"
+}
+
+src_prepare() {
+	default
+}
+
+src_install() {
+	linux-mod_src_install
+}
+
+pkg_postinist() {
+	linux-mod_pkg_postinst
+	elog "If you are using sys-apps/openrc, please add \"douane\" to:"
+	elog "  /etc/conf.d/modules"
+}

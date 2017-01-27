@@ -23,11 +23,7 @@ RDEPEND="
 		"
 DEPEND="${RDEPEND}"
 
-src_compile() {
-	emake douaned
-}
-pkg_install() {
-	into /usr/bin
+src_install() {
 	dobin douaned
 	insinto /etc/init.d
 	doins init.d/douane

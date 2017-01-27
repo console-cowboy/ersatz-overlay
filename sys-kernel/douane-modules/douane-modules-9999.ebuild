@@ -5,7 +5,7 @@
 
 EAPI=6
 
-inherit eutils git-r3 linux-info linux-mod
+inherit git-r3 linux-info linux-mod
 
 DESCRIPTION="Kernel Modules for Douane firewall"
 HOMEPAGE="http://douaneapp.com"

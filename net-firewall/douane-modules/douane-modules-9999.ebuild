@@ -15,8 +15,6 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
 
-RDEPEND="!=sys-kernel/douane-modules-9999"
-
 BUILD_TARGETS="all"
 MODULE_NAMES="douane(net:${S})"
 

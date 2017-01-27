@@ -24,7 +24,7 @@ RDEPEND="
 DEPEND="${RDEPEND}"
 
 src_install() {
-	into /opt/douane
+	exeinto /opt/douane
 	doexe douaned
 	insinto /etc/init.d
 	doins init.d/douane

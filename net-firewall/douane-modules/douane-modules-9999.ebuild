@@ -7,7 +7,7 @@ EAPI=6
 
 inherit git-r3 linux-info linux-mod
 
-DESCRIPTION="Kernel Modules for Douane firewall"
+DESCRIPTION="Kernel modules for the Douane firewall"
 HOMEPAGE="http://douaneapp.com"
 EGIT_REPO_URI="git://github.com/Douane/douane-dkms.git https://github.com/Douane/douane-dkms.git"
 

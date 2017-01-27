@@ -17,7 +17,7 @@ KEYWORDS="~amd64"
 
 RDEPEND="!=sys-kernel/douane-modules-9999"
 
-S=${WORKDIR}
+S=${WORKDIR}/douane-dkms-${PV}
 MODULE_NAMES="douane(net:${S})"
 
 pkg_postinist() {

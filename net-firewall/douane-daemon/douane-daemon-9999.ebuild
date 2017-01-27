@@ -23,6 +23,9 @@ RDEPEND="
 		"
 DEPEND="${RDEPEND}"
 
+src_compile() {
+	emake BINDIR=/usr/bin
+}
 pkg_install() {
 	into /usr/bin
 	dobin douaned

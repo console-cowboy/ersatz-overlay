@@ -4,7 +4,7 @@
 
 EAPI=6
 
-inherit git-r3
+inherit git-r3 systemd
 
 DESCRIPTION="Daemon for the Douane firewall"
 HOMEPAGE="http://douaneapp.com"
@@ -30,4 +30,5 @@ src_install() {
 	doins init.d/douane
 	insinto /etc/dbus-1/system.d/
 	doins system.d/org.zedroot.Douane.conf
+	systemd_dounit "${FILESDIR}"/douane-daemon.service
 }

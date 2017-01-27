@@ -24,6 +24,7 @@ RDEPEND="
 DEPEND="${RDEPEND}"
 
 pkg_install() {
+	into /usr/bin
 	dobin douaned
 	insinto /etc/init.d
 	doins init.d/douane

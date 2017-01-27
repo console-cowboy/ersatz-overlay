@@ -5,7 +5,7 @@
 
 EAPI=6
 
-inherit linux-mod
+inherit linux-info linux-mod
 
 DESCRIPTION="Kernel Modules for Douane firewall"
 HOMEPAGE="http://douaneapp.com"

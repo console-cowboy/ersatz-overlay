@@ -25,7 +25,7 @@ DEPEND="${RDEPEND}"
 
 src_install() {
 	into /opt/douane
-	dobin douaned
+	doexe douaned
 	insinto /etc/init.d
 	doins init.d/douane
 	insinto /etc/dbus-1/system.d/

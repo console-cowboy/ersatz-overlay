@@ -13,12 +13,18 @@ EGIT_REPO_URI="git://github.com/Douane/douane-dkms.git https://github.com/Douane
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS=""
 
 RDEPEND="!=sys-kernel/douane-modules-9999"
 
 BUILD_TARGETS="all"
 MODULE_NAMES="douane(net:${S})"
+
+src_install() {
+	linux-mod_src_install
+	insinto /usr/lib/modules-load.d/
+	doins "${FILESDIR}"/douane.conf
+}
 
 pkg_postinist() {
 	linux-mod_pkg_postinst

@@ -16,6 +16,7 @@ RDEPEND="
 		dev-libs/boost
 		dev-libs/dbus-c++
 		dev-libs/log4cxx
+		net-firewall/douane-modules
 		sys-auth/polkit
 		"
 DEPEND="${RDEPEND}"

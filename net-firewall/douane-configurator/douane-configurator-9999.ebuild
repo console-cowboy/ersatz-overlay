@@ -26,5 +26,6 @@ RDEPEND="
 DEPEND="${RDEPEND}"
 
 src_install() {
+	default
 	domenu ${PN}.desktop
 }

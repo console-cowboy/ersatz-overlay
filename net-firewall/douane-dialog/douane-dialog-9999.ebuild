@@ -24,6 +24,7 @@ DEPEND="${RDEPEND}"
 
 src_prepare() {
 	epatch ${FILESDIR}/${PN}-cflag.patch
+	default
 }
 
 src_install() {

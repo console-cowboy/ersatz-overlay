@@ -1,0 +1,24 @@
+From e6b649155156b483017d9229b74f738fc5b5b761 Mon Sep 17 00:00:00 2001
+From: Alex Acevedo <alex-acevedo@protonmail.com>
+Date: Mon, 30 Jan 2017 17:30:35 -0500
+Subject: [PATCH] patch CFLAGS in Makefile
+
+---
+ Makefile | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/Makefile b/Makefile
+index 620ebd8..4705e20 100644
+--- a/Makefile
++++ b/Makefile
+@@ -2,7 +2,7 @@ DAEMON_VERSION=$(shell cat VERSION)
+ 
+ CC=g++
+ PKGCONFIG=`pkg-config --cflags --libs liblog4cxx dbus-c++-1 gtkmm-3.0`
+-CFLAGS=-pedantic -Wall -W -g $(PKGCONFIG) -DDOUANE_VERSION=\"$(DAEMON_VERSION)\"
++CFLAGS=-std=c++11 -pedantic -Wall -W -g $(PKGCONFIG) -DDOUANE_VERSION=\"$(DAEMON_VERSION)\"
+ LDFLAGS=$(PKGCONFIG) -lboost_signals -lpthread
+ 
+ OBJ=dbus/dbus_client.o \
+-- 
+2.10.2

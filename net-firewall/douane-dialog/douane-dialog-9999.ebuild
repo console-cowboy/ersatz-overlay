@@ -17,6 +17,7 @@ KEYWORDS=""
 RDEPEND="
 	dev-libs/boost
 	dev-libs/dbus-c++
+	dev-libs/log4cxx
 	dev-cpp/gtkmm:3.0
 	"
 DEPEND="${RDEPEND}"

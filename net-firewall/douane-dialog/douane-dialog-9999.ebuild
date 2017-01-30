@@ -4,7 +4,7 @@
 
 EAPI=6
 
-inherit git-r3 systemd
+inherit git-r3
 
 DESCRIPTION="GTK+ dialog for the Douane firewall"
 HOMEPAGE="http://douaneapp.com"

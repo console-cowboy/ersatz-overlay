@@ -23,7 +23,7 @@ RDEPEND="
 DEPEND="${RDEPEND}"
 
 src_prepare() {
-	epatch ${FILESDIR}/${P}-cflag.patch
+	epatch ${FILESDIR}/${PN}-cflag.patch
 }
 
 src_install() {

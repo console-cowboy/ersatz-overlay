@@ -26,6 +26,6 @@ RDEPEND="
 DEPEND="${RDEPEND}"
 
 src_install() {
-	esetup.py
+	esetup.py install
 	domenu ${PN}.desktop
 }

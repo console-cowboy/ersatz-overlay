@@ -26,6 +26,6 @@ RDEPEND="
 DEPEND="${RDEPEND}"
 
 src_install() {
-	esetup.py install
+	distutils-r1_python_install
 	domenu ${PN}.desktop
 }

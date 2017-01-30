@@ -26,6 +26,6 @@ RDEPEND="
 DEPEND="${RDEPEND}"
 
 src_install() {
-	default
+	distutils-r1_python_install	
 	domenu ${PN}.desktop
 }

@@ -4,7 +4,7 @@
 
 EAPI=6
 
-inherit git-r3 systemd
+inherit flag-o-matic git-r3 systemd
 
 DESCRIPTION="GTK+ dialog for the Douane firewall"
 HOMEPAGE="http://douaneapp.com"
@@ -21,6 +21,11 @@ RDEPEND="
 	dev-cpp/gtkmm:3.0
 	"
 DEPEND="${RDEPEND}"
+
+src_compile() {
+	append-cflags $(-std=c++11)
+	default
+}
 
 src_install() {
 	into /opt/douane

@@ -23,7 +23,7 @@ RDEPEND="
 DEPEND="${RDEPEND}"
 
 src_compile() {
-	append-cflags $(-std=c++11)
+	append-cflags "-std=c++11"
 	default
 }
 

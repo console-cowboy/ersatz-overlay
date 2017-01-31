@@ -27,5 +27,5 @@ DEPEND="${RDEPEND}"
 
 src_install() {
 	distutils-r1_src_install()
-	domenu douane-configurator.desktop
+	domenu "douane-configurator.desktop"
 }

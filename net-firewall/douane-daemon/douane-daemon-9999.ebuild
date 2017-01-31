@@ -26,9 +26,7 @@ DEPEND="${RDEPEND}"
 src_install() {
 	exeinto /opt/douane
 	doexe douaned
-	fperms 0755 init.d/douane
-	insinto /etc/init.d
-	doins init.d/douane
+	doinitd init.d/douane
 	insinto /etc/dbus-1/system.d/
 	doins system.d/org.zedroot.Douane.conf
 	systemd_dounit "${FILESDIR}"/douane-daemon.service

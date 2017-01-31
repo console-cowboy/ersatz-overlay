@@ -24,8 +24,3 @@ RDEPEND="
 	x11-misc/gtktwitterbox
 	"
 DEPEND="${RDEPEND}"
-
-src_install() {
-	distutils-r1_python_install
-	domenu ${PN}.desktop
-}

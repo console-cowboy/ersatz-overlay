@@ -5,7 +5,7 @@
 EAPI=6
 
 PYTHON_COMPAT=( python{3_4,3_5,3_6} )
-inherit distutils-r1 git-r3 python-r1
+inherit distutils-r1 git-r3
 
 DESCRIPTION="A GTK+ module for displaying recent tweets"
 HOMEPAGE="http://douaneapp.com"

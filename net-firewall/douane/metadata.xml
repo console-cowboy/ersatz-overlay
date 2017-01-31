@@ -7,6 +7,6 @@
 		<description>Overlay Maintainer</description>
 	</maintainer>
 	<upstream>
-		<remote-id type="github">Douane/douane-configurator</remote-id>
+		<remote-id type="github">Douane/Douane</remote-id>
 	</upstream>
 </pkgmetadata>

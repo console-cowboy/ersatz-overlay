@@ -12,7 +12,7 @@ SLOT="0"
 KEYWORDS="~amd64"
 RDEPEND="net-misc/curl"
 DEPEND="${RDEPEND}"
-
+S="${WORKDIR}/GnuSocialShell-master"
 src_prepare() {
 	config_rpath_update "${S}/config.rpath"
 	eautoreconf

@@ -16,6 +16,7 @@ DEPEND="${RDEPEND}"
 src_prepare() {
 	config_rpath_update "${S}/config.rpath"
 	eautoreconf
+	eapply_user
 }
 
 src_install() {

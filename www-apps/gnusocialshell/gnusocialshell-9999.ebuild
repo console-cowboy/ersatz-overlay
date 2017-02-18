@@ -14,7 +14,7 @@ RDEPEND="net-misc/curl"
 DEPEND="${RDEPEND}"
 
 src_prepare() {
-	config_rpath_update
+	config_rpath_update "${S}/config.rpath"
 	eautoreconf
 }
 

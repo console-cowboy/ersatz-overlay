@@ -9,7 +9,7 @@ HOMEPAGE="http://gnusocialshell.amayaos.com/"
 SRC_URI="http://gnusocialshell.amayaos.com/downloads/GnuSocialShell-1.1.zip"
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64"
 RDEPEND="net-misc/curl"
 DEPEND="${RDEPEND}"
 

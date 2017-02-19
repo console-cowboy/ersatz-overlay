@@ -4,7 +4,7 @@
 
 EAPI=6
 inherit eutils
-IUSE="linguas_en linguas_es linguas_fr"
+IUSE="+linguas_en linguas_es linguas_fr"
 DESCRIPTION="A GTK+ GNUsocial client"
 HOMEPAGE="http://gsdesktop.amayaos.com/"
 SRC_URI="http://gsdesktop.amayaos.com/downloads/GnuSocialDesktop-0.6-Bilbo.tar.xz"

@@ -4,7 +4,6 @@
 
 EAPI=6
 inherit git-r3 eutils
-IUSE="+linguas_en linguas_es linguas_fr"
 DESCRIPTION="A GTK+ GNUsocial client"
 HOMEPAGE="http://gsdesktop.amayaos.com/"
 EGIT_REPO_URI="https://github.com/dalmemail/GnuSocialDesktop"
@@ -16,20 +15,6 @@ RDEPEND="net-misc/curl
 	 x11-libs/gtk+:2"
 DEPEND="${RDEPEND}"
 
-src_compile() {
-	if use linguas_es && ! use linguas_en && ! use linguas_fr; then
-		emake spanish
-	fi
-	if use linguas_fr && ! use linguas_en && ! use linguas_es; then
-		emake french
-	fi
-	if use linguas_es && use linguas_fr && ! use linguas_en; then
-		emake spanish
-	fi
-	if use linguas_en; then
-		emake english
-	fi
-}
 src_install() {
 	dobin gsd
 	einstalldocs

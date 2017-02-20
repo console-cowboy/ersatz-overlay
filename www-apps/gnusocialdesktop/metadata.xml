@@ -6,6 +6,15 @@
 		<name>Alexander Acevedo</name>
 		<description>Overlay Maintainer</description>
 	</maintainer>
+	<use>
+		<flag name="english">Enable English language support.</flag>
+	</use>
+	<use>
+		<flag name="spanish">Enable Spanish language support.</flag>
+	</use>
+	<use>
+		<flag name="french">Enable French language support.</flag>
+	</use>
 	<upstream>
 		<remote-id type="github">dalmemail/GnuSocialDesktop</remote-id>
 	</upstream>

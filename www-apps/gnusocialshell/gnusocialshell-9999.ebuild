@@ -4,7 +4,7 @@
 
 EAPI=6
 inherit autotools git-r3
-DESCRIPTION="A text-based GNUsocial client."
+DESCRIPTION="A text-based GNUsocial client"
 HOMEPAGE="http://gnusocialshell.amayaos.com/"
 EGIT_REPO_URI="https://github.com/dalmemail/GnuSocialShell"
 LICENSE="GPL-3"

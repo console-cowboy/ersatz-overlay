@@ -4,7 +4,7 @@
 
 EAPI=6
 inherit autotools
-DESCRIPTION="A text-based GNUsocial client."
+DESCRIPTION="A text-based GNUsocial client"
 HOMEPAGE="http://gnusocialshell.amayaos.com/"
 SRC_URI="http://gnusocialshell.amayaos.com/downloads/GnuSocialShell-1.1.zip"
 LICENSE="GPL-3"

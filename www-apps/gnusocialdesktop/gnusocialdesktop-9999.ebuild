@@ -32,5 +32,5 @@ src_compile() {
 src_install() {
 	dobin gsd
 	einstalldocs
-	make_desktop_entry gsd "GnuSocialDesktop" "gnusocialdesktop" "Network,GTK" "Terminal=false"
+	make_desktop_entry gsd "GnuSocialDesktop" "gnusocialdesktop" "Network" "Terminal=false"
 }

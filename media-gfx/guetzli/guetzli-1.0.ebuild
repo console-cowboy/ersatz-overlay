@@ -10,7 +10,7 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 RDEPEND="
-	dev-cpp/gflags
+	>=dev-cpp/gflags-2.1.2
 	media-libs/libpng
 	"
 

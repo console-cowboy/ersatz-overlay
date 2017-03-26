@@ -22,5 +22,5 @@ DEPEND="${RDEPEND}"
 
 src_install() {
 	into /usr/lib/pidgin
-	dolib build/carbons.so
+	dolib.so build/carbons.so
 }

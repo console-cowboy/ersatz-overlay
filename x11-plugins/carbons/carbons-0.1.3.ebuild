@@ -22,6 +22,6 @@ DEPEND="${RDEPEND}"
 
 src_install() {
 	insinto /usr/lib/pidgin
-	insopts -m644
+	insopts -m755
 	doins build/carbons.so
 }

@@ -23,7 +23,8 @@ RDEPEND="
 DEPEND="${RDEPEND}"
 
 src_install() {
-        into /usr/lib/pidgin
-        dolib.so build/carbons.so
+        insinto /usr/lib/pidgin
+        insopts -m644
+        doins build/carbons.so
 }
 

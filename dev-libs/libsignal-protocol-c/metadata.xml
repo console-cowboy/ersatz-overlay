@@ -6,6 +6,9 @@
 		<name>Alexander Acevedo</name>
 		<description>Overlay Maintainer</description>
 	</maintainer>
+	<use>
+		<flag name="shared">Build shared library</flag>
+	</use>
 	<upstream>
 		<remote-id type="github">WhisperSystems/libsignal-protocol-c</remote-id>
 	</upstream>

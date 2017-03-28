@@ -14,3 +14,9 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
+src_configure() {
+        local mycmakeargs=(
+                $(cmake-utils_use_build shared SHARED_LIBS)
+        )
+	cmake-utils_src_configure
+}

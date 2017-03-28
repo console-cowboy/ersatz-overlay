@@ -20,7 +20,9 @@ RDEPEND="
 	net-im/pidgin
 	"
 
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	dev-libs/libxml2
+	"
 
 src_install() {
         insinto /usr/lib/pidgin

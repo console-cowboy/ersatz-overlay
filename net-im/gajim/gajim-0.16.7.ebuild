@@ -117,6 +117,5 @@ src_install() {
 	}
 	python_foreach_impl installation
 
-	rm "${ED}/usr/share/doc/${PF}/README.html" || die
 	dohtml README.html
 }

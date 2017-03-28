@@ -21,3 +21,7 @@ RDEPEND="
 	"
 
 DEPEND="${RDEPEND}"
+
+src_compile() {
+        emake AX_PATH="/usr/lib/libsignal-protocol-c.a"
+}

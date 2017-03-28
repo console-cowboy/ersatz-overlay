@@ -117,5 +117,5 @@ src_install() {
 	}
 	python_foreach_impl installation
 
-	dohtml README.html
+	dohtml README
 }

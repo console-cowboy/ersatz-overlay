@@ -16,7 +16,7 @@ IUSE="+shared"
 
 src_configure() {
 	local mycmakeargs=(
-		$(cmake-utils_use_build shared SHARED_LIBS)
+		-DBUILD_SHARED_LIBS="$(usex shared)"
 	)
 	cmake-utils_src_configure
 }

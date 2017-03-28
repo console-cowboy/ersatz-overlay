@@ -12,11 +12,11 @@ SRC_URI="https://github.com/WhisperSystems/libsignal-protocol-c/archive/v${PV}.t
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE=""
+IUSE="+shared"
 
 src_configure() {
         local mycmakeargs=(
-                $(cmake-utils_use_build shared SHARED_LIBS)
+                -DBUILD_SHARED_LIBS="$(usex shared)"
         )
 	cmake-utils_src_configure
 }

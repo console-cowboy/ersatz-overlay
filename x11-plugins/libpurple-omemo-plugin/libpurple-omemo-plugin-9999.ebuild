@@ -17,6 +17,7 @@ IUSE=""
 RDEPEND="
 	dev-db/sqlite:3
 	dev-libs/libgcrypt:0
+	dev-libs/libsignal-protocol-c[shared]
 	net-im/pidgin
 	"
 

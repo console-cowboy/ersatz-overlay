@@ -10,11 +10,8 @@ EGIT_REPO_URI="https://github.com/dino/dino"
 EGIT_SUBMODULES=( libsignal-protocol-c )
 LICENSE="GPL-3"
 SLOT="0"
-IUSE="omemo openpgp"
 KEYWORDS=""
 RDEPEND="
-	omemo? ( dev-libs/openssl )
-	openpgp? ( app-crypt/gpgme )
 	dev-db/sqlite:3
 	>dev-libs/libgee-0.10:0.8
 	>=dev-libs/glib-2.38
@@ -31,11 +28,5 @@ DEPEND="
 src_prepare() {
 	vala_src_prepare
 	default
-}
-
-src_configure() {
-	econf \
-		$( use_enable omemo "plugin=omemo" ) \
-		$( use_enable openpgp "plugin=openpgp" )
 }
 

@@ -9,8 +9,4 @@
 	<upstream>
 		<remote-id type="github">dino/dino</remote-id>
 	</upstream>
-	<use>
-		<flag name="omemo">Enable OMEMO plugin</flag>
-		<flag name="openpgp">Enable OpenPGP plugin</flag>
-	</use>
 </pkgmetadata>

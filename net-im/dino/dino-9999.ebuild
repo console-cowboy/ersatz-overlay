@@ -29,6 +29,6 @@ DEPEND="
 	"
 src_configure() {
 	econf \
-		$(use_enable omemo "plugin=omemo" ) \
-		$(use_enable openpgp "plugin=openpgp"
+		$( use_enable omemo "plugin=omemo" ) \
+		$( use_enable openpgp "plugin=openpgp" )
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+
 EAPI=6
 VALA_MIN_API_VERSION="0.30"
 inherit git-r3 vala
@@ -27,8 +27,14 @@ DEPEND="
 	dev-util/cmake
 	dev-util/ninja
 	"
+
+src_prepare() {
+	vala_src_prepare
+}
+
 src_configure() {
 	econf \
 		$( use_enable omemo "plugin=omemo" ) \
 		$( use_enable openpgp "plugin=openpgp" )
 }
+

@@ -52,6 +52,7 @@ src_prepare() {
 	intltoolize
 	eautoreconf
 	export VALAC="$(type -p valac-$(vala_best_api_version))"
+	default
 }
 
 src_configure() {

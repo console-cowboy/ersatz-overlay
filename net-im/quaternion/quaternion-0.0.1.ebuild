@@ -7,7 +7,7 @@ inherit cmake-utils
 
 DESCRIPTION="Qt5 IM client for the Matrix protocol"
 HOMEPAGE="https://github.com/QMatrixClient/Quaternion"
-SRC_URI="https://github.com/QMatrixClient/Quaternion/releases/download/v${PV}/quaternion-source-${PV}.tar.gz"
+SRC_URI="https://github.com/QMatrixClient/Quaternion/releases/download/v${PV}/quaternion-source-${PV}.tar.gz -> ${P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"

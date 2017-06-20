@@ -17,7 +17,7 @@ DEPEND="
 	>=dev-qt/qtquickcontrols-5.2.1[widgets]
 	>=dev-qt/qtquickcontrols2-5.2.1
 	>=dev-qt/qtdeclarative-5.2.1[widgets]
-	>=dev-qt/dev-qt/qtnetwork-5.2.1
+	>=dev-qt/qtnetwork-5.2.1
 	>=dev-qt/qtgui-5.2.1
 	>=dev-qt/qtwidgets-5.2.1
 	"

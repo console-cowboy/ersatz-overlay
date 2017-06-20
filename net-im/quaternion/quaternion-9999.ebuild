@@ -13,7 +13,7 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS=""
 
-DEPEND="
+RDEPEND="
 	>=dev-qt/qtcore-5.2.1
 	>=dev-qt/qtquickcontrols-5.2.1[widgets]
 	>=dev-qt/qtdeclarative-5.2.1[widgets]
@@ -21,3 +21,4 @@ DEPEND="
 	>=dev-qt/qtgui-5.2.1
 	>=dev-qt/qtwidgets-5.2.1
 	"
+DEPEND="${RDEPEND}"

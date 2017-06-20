@@ -20,4 +20,4 @@ DEPEND="
 	>=dev-qt/qtgui-5.2.1
 	>=dev-qt/qtwidgets-5.2.1
 	"
-
+S=${WORKDIR}/Quaternion-${PV}

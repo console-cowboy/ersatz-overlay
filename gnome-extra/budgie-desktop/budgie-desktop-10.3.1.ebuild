@@ -50,6 +50,7 @@ DEPEND="${PYTHON_DEPS}
 "
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-remove_postinstall.patch"
+	epatch "${FILESDIR}/${PN}-fix_gobject_types.patch"
 	mkdir ${S}/tmpbin
 	ln -s $(echo $(whereis valac-) | grep -oE "[^[[:space:]]*$") ${S}/tmpbin/valac
 	default

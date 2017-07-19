@@ -33,9 +33,11 @@ src_configure() {
 }
 
 src_compile() {
+	cd ${BUILD_DIR}
 	PATH="${S}/tmpbin/:$PATH" eninja || die "ninja failed"
 }
 
 src_install() {
+	cd ${BUILD_DIR}
 	PATH="${S}/tmpbin/:$PATH" DESTDIR="${D}" eninja install || die "ninja install failed"
 }

@@ -32,6 +32,7 @@ RDEPEND="pm-utils? ( sys-power/upower-pm-utils[introspection] )
 
 DEPEND="${PYTHON_DEPS}
 	$(vala_depend)
+	dev-libs/vala-common
 	>=dev-libs/gobject-introspection-1.44.0[${PYTHON_USEDEP}]
 	>=x11-wm/mutter-3.18.0:0
 	media-libs/clutter:1.0

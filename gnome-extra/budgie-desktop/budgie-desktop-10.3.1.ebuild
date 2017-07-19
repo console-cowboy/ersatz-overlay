@@ -57,9 +57,9 @@ src_prepare() {
 
 src_configure() {
 	local emesonargs=(
-		-Dwith-bluetooth=(usex bluetooth true false)
-		-Dwith-introspection=(usex introspection true false)
-		-Dwith-polkit=(usex policykit true false)
+		-Dwith-bluetooth=$(usex bluetooth true false)
+		-Dwith-introspection=$(usex introspection true false)
+		-Dwith-polkit=$(usex policykit true false)
         )
 	PATH="${S}/tmpbin/:$PATH" meson_src_configure
 }

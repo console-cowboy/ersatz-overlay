@@ -3,7 +3,7 @@
 
 EAPI=6
 
-inherit autotools
+inherit autotools eutils
 
 DESCRIPTION="A satirical open-source text-based modern strategic political RPG"
 HOMEPAGE="http://lcs.wikidot.com/"
@@ -22,7 +22,7 @@ RDEPEND="sys-libs/ncurses
 
 DEPEND="${RDEPEND}"
 
-$S="${WORKDIR}/Liberal-Crime-Squad-${PV}"
+S="${WORKDIR}/Liberal-Crime-Squad-${PV}"
 
 src_prepare() {
 	eapply_user

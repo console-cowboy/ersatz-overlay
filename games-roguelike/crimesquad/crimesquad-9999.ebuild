@@ -3,7 +3,7 @@
 
 EAPI=6
 
-inherit autotools git-r3
+inherit autotools eutils git-r3
 
 DESCRIPTION="A satirical open-source text-based modern strategic political RPG"
 HOMEPAGE="http://lcs.wikidot.com/"

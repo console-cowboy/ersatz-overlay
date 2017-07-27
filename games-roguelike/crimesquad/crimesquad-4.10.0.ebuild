@@ -32,5 +32,4 @@ src_prepare() {
 src_install() {
 	emake DESTDIR="${D}" install
 	domenu crimesquad.desktop
-	dodoc AUTHORS LINUX_README.txt TODO
 }

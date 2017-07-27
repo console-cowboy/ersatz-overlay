@@ -7,7 +7,7 @@ inherit autotools
 
 DESCRIPTION="A satirical open-source text-based modern strategic political RPG"
 HOMEPAGE="http://www.bay12forums.com/smf/index.php?topic=125450.0"
-SRC_URI="https://github.com/Kamal-Sadek/Liberal-Crime-Squad/releases/download/v${PV}/Liberal.Crime.Squad.Linux.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/Kamal-Sadek/Liberal-Crime-Squad/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64"

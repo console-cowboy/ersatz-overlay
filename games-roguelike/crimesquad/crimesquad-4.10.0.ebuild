@@ -22,7 +22,7 @@ RDEPEND="sys-libs/ncurses
 
 DEPEND="${RDEPEND}"
 
-$S="${WORKDIR}/Liberal-Crime-Squad-${PV}"
+S="${WORKDIR}/Liberal-Crime-Squad-${PV}"
 
 src_prepare() {
 	eapply_user

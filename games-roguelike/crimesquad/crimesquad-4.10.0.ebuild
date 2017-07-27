@@ -6,7 +6,7 @@ EAPI=6
 inherit autotools
 
 DESCRIPTION="A satirical open-source text-based modern strategic political RPG"
-HOMEPAGE="http://www.bay12forums.com/smf/index.php?topic=125450.0"
+HOMEPAGE="http://lcs.wikidot.com/"
 SRC_URI="https://github.com/Kamal-Sadek/Liberal-Crime-Squad/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"

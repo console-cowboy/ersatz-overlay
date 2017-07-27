@@ -6,7 +6,7 @@ EAPI=6
 inherit autotools git-r3
 
 DESCRIPTION="A satirical open-source text-based modern strategic political RPG"
-HOMEPAGE="http://www.bay12forums.com/smf/index.php?topic=125450.0"
+HOMEPAGE="http://lcs.wikidot.com/"
 EGIT_REPO_URI="https://github.com/Kamal-Sadek/Liberal-Crime-Squad.git"
 
 LICENSE="GPL-2"

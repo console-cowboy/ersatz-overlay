@@ -35,8 +35,12 @@ src_install() {
 	doins -r art
 	doins -r docs
 	doins src/crimesquad
-	fperms +x /opt/${PN}/crimesquad
-	dosym /opt/crimesquad/${PN} /usr/bin/${PN}
+        cat <<-EOF >"${ED}"usr/bin/${PN}
+        #!/bin/sh
+        cd /opt/${PN}/ && exec ${PN}
+        EOF
+        fperms 0755 /usr/bin/${PN}
+
 }
 
 pkg_preinst() {

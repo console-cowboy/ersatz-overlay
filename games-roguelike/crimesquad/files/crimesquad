@@ -1,0 +1,5 @@
+#!/bin/sh
+gamesdir=/opt/crimesquad
+cd "$gamesdir" || exit
+exec ./crimesquad "$@"
+

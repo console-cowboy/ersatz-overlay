@@ -29,18 +29,14 @@ src_prepare() {
 }
 
 src_install() {
-	domenu crimesquad.desktop
-	doman man/crimesquad.6
-	insinto /opt/${PN}
-	doins -r art
-	doins -r docs
-	doins src/crimesquad
-        cat <<-EOF >"${ED}"usr/bin/${PN}
-        #!/bin/sh
-        cd /opt/${PN}/ && exec ${PN}
-        EOF
-        fperms 0755 /usr/bin/${PN}
-
+        dobin ${FILESDIR}/${PN}
+        domenu ${PN}.desktop
+        doman man/${PN}.6
+        insinto /opt/${PN}
+        doins -r art
+        doins -r docs
+        doins -r man
+        doins src/${PN}
 }
 
 pkg_preinst() {

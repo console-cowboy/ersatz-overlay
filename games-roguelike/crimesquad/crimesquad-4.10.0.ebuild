@@ -38,6 +38,7 @@ src_install() {
 	doins -r docs
 	doins -r man
 	doins src/${PN}
+	fperms +x /opt/${PN}/${PN}
 }
 
 pkg_preinst() {

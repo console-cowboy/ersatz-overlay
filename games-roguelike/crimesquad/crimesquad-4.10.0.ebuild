@@ -15,12 +15,9 @@ IUSE="+sound +vorbis"
 REQUIRED_USE="vorbis? ( sound )"
 
 RDEPEND="sys-libs/ncurses
-	sound? ( !vorbis? ( media-libs/libsdl2[sound]
-		 	    media-libs/sdl2-mixer[midi]
-			  )
-		 vorbis? ( media-libs/libsdl2[sound]
-		 	   media-libs/sdl2-mixer[vorbis]
-			 )
+	sound? ( media-libs/libsdl2[sound]
+		 !vorbis? ( media-libs/sdl2-mixer[midi] )
+		 vorbis? ( media-libs/sdl2-mixer[vorbis] )
 	       )
 	"
 

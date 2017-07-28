@@ -3,7 +3,7 @@
 
 EAPI=6
 
-inherit autotools eutils
+inherit autotools eutils gnome2-utils
 
 DESCRIPTION="A satirical open-source text-based modern strategic political RPG"
 HOMEPAGE="http://lcs.wikidot.com/"
@@ -30,6 +30,25 @@ src_prepare() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install
 	domenu crimesquad.desktop
+	doman man/crimesquad.6
+	insinto /opt/
+	doins -r art
+	doins -r docs
+	doins -r man
+	doins src/crimesquad
+	fperms +x /opt/${PN}/crimesquad
+	dosym /opt/crimesquad/${PN} /usr/bin/${PN}
+}
+
+pkg_preinst() {
+	gnome2_icon_savelist
+}
+
+pkg_postinst() {
+	gnome2_icon_cache_update
+}
+
+pkg_postrm() {
+	gnome2_icon_cache_update
 }

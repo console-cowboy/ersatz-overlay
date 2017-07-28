@@ -17,7 +17,7 @@ REQUIRED_USE="vorbis? ( sound )"
 
 RDEPEND="sys-libs/ncurses
 	sound? ( media-libs/libsdl2[sound]
-		 media-libs/sdl2-mixer[vorbis=]
+		 media-libs/sdl2-mixer[midi,vorbis=]
 	       )
 	"
 

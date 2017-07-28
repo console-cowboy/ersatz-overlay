@@ -31,7 +31,7 @@ src_prepare() {
 src_install() {
 	domenu crimesquad.desktop
 	doman man/crimesquad.6
-	insinto /opt/
+	insinto /opt/${PN}
 	doins -r art
 	doins -r docs
 	doins src/crimesquad

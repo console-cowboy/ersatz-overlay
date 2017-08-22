@@ -15,7 +15,7 @@ EGIT_COMMIT="v${PV}"
 IUSE="+bluetooth +policykit pm-utils"
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 RDEPEND="pm-utils? ( sys-power/upower-pm-utils[introspection] )
 	 !pm-utils? ( sys-power/upower[introspection] )
 	 >=gnome-base/gnome-menus-3.10.1:=

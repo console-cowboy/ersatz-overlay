@@ -11,13 +11,12 @@ MY_AUTHOR="budgie-desktop"
 DESCRIPTION="Desktop Environment based on GNOME 3"
 HOMEPAGE="https://evolve-os.com/budgie/"
 EGIT_REPO_URI="https://github.com/${MY_AUTHOR}/${PN}.git"
-EGIT_COMMIT="v${PV}"
-IUSE="+bluetooth +policykit +introspection pm-utils"
+IUSE="+bluetooth +policykit pm-utils"
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
-RDEPEND="pm-utils? ( sys-power/upower-pm-utils[introspection=] )
-	 !pm-utils? ( sys-power/upower[introspection=] )
+KEYWORDS="~amd64"
+RDEPEND="pm-utils? ( sys-power/upower-pm-utils[introspection] )
+	 !pm-utils? ( sys-power/upower[introspection] )
 	 >=gnome-base/gnome-menus-3.10.1:=
 	 bluetooth? ( >=net-wireless/gnome-bluetooth-3.18:= )
 	 gnome-base/gnome-session
@@ -28,12 +27,14 @@ RDEPEND="pm-utils? ( sys-power/upower-pm-utils[introspection=] )
 	 media-sound/pulseaudio
 	 >=x11-libs/gtk+-3.16:3
 	 >=gnome-base/gnome-desktop-3.18.0:3
-	 policykit? ( >=sys-auth/polkit-0.110[introspection=] )
+	 policykit? ( >=sys-auth/polkit-0.110[introspection] )
 	 x11-libs/wxGTK:3.0"
 
 DEPEND="${PYTHON_DEPS}
 	$(vala_depend)
-	introspection? ( >=dev-libs/gobject-introspection-1.44.0[${PYTHON_USEDEP}] )
+	dev-lang/sassc
+	dev-libs/vala-common
+	>=dev-libs/gobject-introspection-1.44.0[${PYTHON_USEDEP}]
 	>=x11-wm/mutter-3.18.0:0
 	media-libs/clutter:1.0
 	>=x11-libs/libwnck-3.14:3
@@ -52,13 +53,13 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-remove_postinstall.patch"
 	mkdir ${S}/tmpbin
 	ln -s $(echo $(whereis valac-) | grep -oE "[^[[:space:]]*$") ${S}/tmpbin/valac
+	ln -s $(echo $(whereis vapigen-) | grep -oE "[^[[:space:]]*$") ${S}/tmpbin/vapigen
 	default
 }
 
 src_configure() {
 	local emesonargs=(
 		-Dwith-bluetooth=$(usex bluetooth true false)
-		-Dwith-introspection=$(usex introspection true false)
 		-Dwith-polkit=$(usex policykit true false)
         )
 	PATH="${S}/tmpbin/:$PATH" meson_src_configure

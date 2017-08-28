@@ -5,8 +5,8 @@ EAPI=6
 
 inherit eutils versionator
 
-SR=SR$(get_version_component_range 3)
-#SR="R"
+#SR=SR$(get_version_component_range 3)
+SR="R"
 RNAME="oxygen"
 
 SRC_BASE="http://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/${RNAME}/${SR}/eclipse-java-${RNAME}-${SR}-linux-gtk"

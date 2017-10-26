@@ -8,7 +8,7 @@ inherit eutils git-r3 gnome2 autotools
 
 DESCRIPTION="fork of gnome-screensaver maintained for Budgie Desktop"
 HOMEPAGE="https://github.com/solus-project/budgie-screensaver"
-EGIT_REPO_URI="https://github.com/solus-project/budgie-screensaver"
+EGIT_REPO_URI="https://github.com/solus-project/budgie-screensaver.git"
 
 LICENSE="GPL-2+"
 SLOT="0"

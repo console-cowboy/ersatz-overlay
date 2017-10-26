@@ -73,6 +73,6 @@ src_configure() {
 		--with-mit-ext \
 		--with-pam-prefix=/etc \
 		--with-xf86gamma-ext \
-		--with-kbd-layout-indicator"
+		--with-kbd-layout-indicator
 		
 }

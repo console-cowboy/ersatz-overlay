@@ -2,9 +2,8 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="6"
-GCONF_DEBUG="yes"
 
-inherit autotools eutils git-r3 gnome2
+inherit autotools eutils git-r3
 
 DESCRIPTION="fork of gnome-screensaver maintained for Budgie Desktop"
 HOMEPAGE="https://github.com/solus-project/budgie-screensaver"
@@ -52,28 +51,5 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	epatch_user
-	# Regenerate marshaling code for <glib-2.31 compat
-	rm -v src/gs-marshal.{c,h} || die
-
-	gnome2_src_prepare
-
 	eautoreconf
-}
-
-src_configure() {
-	DOCS="AUTHORS ChangeLog HACKING NEWS README"
-	G2CONF="${G2CONF}
-		$(use_enable doc docbook-docs)
-		$(use_enable pam locking)
-		$(use_with systemd)
-		--with-mit-ext
-		--with-pam-prefix=/etc
-		--with-xf86gamma-ext
-		--with-kbd-layout-indicator"
-	# Do not use --without-console-kit, it would provide no benefit: there is
-	# no build-time or run-time check for consolekit, $PN merely listens to
-	# consolekit's messages over dbus.
-	# xscreensaver and custom screensaver capability removed
-	# poke and inhibit commands were also removed, bug 579430
-	gnome2_src_configure
 }

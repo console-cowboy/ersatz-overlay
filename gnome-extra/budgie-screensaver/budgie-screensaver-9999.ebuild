@@ -4,7 +4,7 @@
 EAPI="6"
 GCONF_DEBUG="yes"
 
-inherit eutils git-r3 gnome2 autotools
+inherit autotools eutils git-r3 gnome2
 
 DESCRIPTION="fork of gnome-screensaver maintained for Budgie Desktop"
 HOMEPAGE="https://github.com/solus-project/budgie-screensaver"

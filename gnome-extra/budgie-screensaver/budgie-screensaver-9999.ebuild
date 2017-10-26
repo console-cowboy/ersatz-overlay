@@ -53,8 +53,6 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	epatch_user
-	# Regenerate marshaling code for <glib-2.31 compat
-	rm -v src/gs-marshal.{c,h} || die
 
 	gnome2_src_prepare
 
